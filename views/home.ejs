@@ -2,11 +2,12 @@
 
 <h1>Home</h1>
 
+<%= startingContent %>
+
+
 <% posts.forEach((item) => { %>
   <h1><%= item.title %></h1>
-  <p><%= item.post %></p>
-
-
+  <p><%= item.post.substring(0,100)  %> <a href="<%= "/post/"+ item.title %>" >...</a></p>
 <% }); %>
 
 
